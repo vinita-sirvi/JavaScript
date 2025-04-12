@@ -41,3 +41,25 @@ const myFunction = function() { //function (block of code designed to perform a 
 
 console.log(typeof myFunction);
 
+
+
+// *****************************************************//
+// Memory Management in JavaScript
+// 1. Stack Memory: Used for static memory allocation. It stores primitive data types and references to objects and functions. Stack memory is automatically managed by JavaScript, and memory is freed when the function call ends.
+// 2. Heap Memory: Used for dynamic memory allocation. It stores objects, arrays, and functions. Heap memory is managed by the garbage collector, which automatically frees up memory that is no longer in use.
+
+
+let MyYoutubeChannel = "Vini"
+let anotherName = MyYoutubeChannel
+console.log(anotherName); // Vini
+
+
+let user = {
+    email : "ABC@gmail.com",    
+    upi: "Abc@ybl",
+}
+
+let user2 = user; // reference to the same object in memory
+user2.email="vini@gmail.com"
+console.log(user.email)
+console.log(user2.email) // both will show the updated email
